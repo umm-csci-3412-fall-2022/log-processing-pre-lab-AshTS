@@ -1,7 +1,4 @@
 #!/bin/bash
-cat $2_header.html $1 $2_footer.html > $3
+cat "$2"_header.html "$1" "$2"_footer.html > "$3"
 
-if test $4==view
-then
-	firefox $3
-fi
+[ "$4" = "view" ] && firefox "$3"
