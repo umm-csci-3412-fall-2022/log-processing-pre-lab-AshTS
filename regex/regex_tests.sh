@@ -66,7 +66,7 @@ teardown() {
 # If this test fails, you're not handling the first case
 # correctly.
 @test "regex.sh handles the first case correctly" {
-  run ./regex.sh r0_input.txt
+  run ./regex.sh
   run diff -wbB r0_output.txt targets/r0_target_output.txt
   assert_success
 }
@@ -74,7 +74,7 @@ teardown() {
 # If this test fails, you're not handling the second case
 # correctly.
 @test "regex.sh handles the second case correctly" {
-  run ./regex.sh r1_input.txt
+  run ./regex.sh
   run diff -wbB r1_output.txt targets/r1_target_output.txt
   assert_success
 }
@@ -82,7 +82,7 @@ teardown() {
 # If this test fails, you're not handling the third case
 # correctly.
 @test "regex.sh handles the third case correctly" {
-  run ./regex.sh r2_input.txt
+  run ./regex.sh
   run diff -wbB r2_output.txt targets/r2_target_output.txt
   assert_success
 }
